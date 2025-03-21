@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+    <head>
+        <meta charset="utf-8">
+        <title>Instituciones de Educación Superior - ANUIES</title>
+        <link rel="stylesheet" type="text/css" href="/recursos/estilos/sdxDesign_2024_2.css">
+        <link rel="shortcut icon" type="image/x-icon" href="/recursos/imagenes/favicon.ico">
+        <link href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet" type="text/css">
+        <link href="http://ajax.googleapis.com/ajax/libs/dojo/1.10.3/dijit/themes/claro/claro.css" rel="stylesheet" type="text/css">
+        <style media="all">
+            <!--
+            /*** E S T I L O S   E S P E C Í F I C O S   P A R A   E S T A   P Á G I N A ***/
+            .institucionesDivInstitucion {
+                margin-left: 20px;
+                margin-right: 20px;
+                overflow: hidden;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                background-color: #efefef;
+            }
+
+            .institucionesAURLInstitucion {	
+
+            }
+
+            .institucionesDivLogoInstitucion {
+                width: 50px;
+                float: left;
+                padding: 10px;	
+            }
+
+            .institucionesDivNombreInstitucion {
+                width: 560px;
+                float: left;
+                padding-left: 20px;	
+                padding-top: 20px;
+                padding-bottom: 10px;
+            }
+
+            .institucionesImgLogoInstitucion {
+                width: auto;
+            }
+
+            .institucionesAURLExterna {
+                margin-left: 10px;
+                display: inline-block;
+                background-color: #cccccc;
+                color: #ffffff;
+                padding: 5px;
+                font-size: 8px;
+            }
+
+
+            #institucionesDivDespliegueTitulo {
+                width: 650px;
+                padding: 10px;
+                margin-left: 10px;
+                margin-right: 10px;
+                margin-bottom: 20px;
+                background-color: #dedede;
+                text-align: center;
+                color: #790001;
+                font-size: 16px;
+                font-weight: 600;
+            }
+
+            #institucionesDivDespliegueImagen {
+                width: 100px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 10px;
+            }	
+
+            #institucionesDivDespliegueDatosGenerales {
+                width: 650px;
+                padding: 10px;
+                margin-left: 10px;
+                margin-right: 10px;
+                margin-bottom: 10px;
+                font-size: 14px;
+                text-align: center;
+            }
+
+            #institucionesDivAfiliaciones {
+                width: 650px;
+                padding: 10px;
+                margin-left: 10px;
+                margin-right: 10px;
+                margin-bottom: 20px;	
+                text-align: center;
+            }
+
+            .institucionesAfiliacionANUIES {
+                padding: 3px;
+                font-size: 9px;
+                font-weight: 600;
+                font-family: "Open Sans", sans-serif;
+                color: #ffffff;
+                background-color: #003399;
+                margin-right: 20px;
+            }
+
+            .institucionesAfiliacionCUPIA {
+                padding: 3px;
+                font-size: 9px;
+                font-weight: 600;
+                font-family: "Open Sans", sans-serif;
+                color: #ffffff;
+                background-color: #330099;
+                margin-right: 20px;
+            }
+
+            .institucionesAfiliacionCUPRIA {
+                padding: 3px;
+                font-size: 9px;
+                font-weight: 600;
+                font-family: "Open Sans", sans-serif;
+                color: #ffffff;
+                background-color: #009933;
+                margin-right: 20px;
+            }
+
+            .institucionesAfiliacionCONAC {
+                padding: 3px;
+                font-size: 9px;
+                font-weight: 600;
+                font-family: "Open Sans", sans-serif;
+                color: #ffffff;
+                background-color: #993300;
+                margin-right: 20px;
+            }
+
+            .institucionesAfiliacionConReg {
+                padding: 3px;
+                font-size: 9px;
+                font-weight: 600;
+                font-family: "Open Sans", sans-serif;
+                color: #ffffff;
+                background-color: #990033;
+                margin-right: 20px;
+            }
+
+            #iconoColapsable1, #iconoColapsable2, #iconoColapsable3, #iconoColapsable4 {
+                width: auto;
+                border-style: none;
+            }
+
+            .institucionesDivGeneralesTexto {
+                padding: 10px;
+            }
+
+            .institucionesSpanDato {
+                font-weight: 600;
+            }
+
+            #institucionesDivDireccion {
+                width: 650px;
+                padding: 10px;
+                margin-left: 10px;
+                margin-right: 10px;
+                margin-bottom: 20px;		
+            }
+
+            .institucionesLiNoBullet {
+                list-style: none;
+            }
+            -->
+        </style>
+        <script src="http://ajax.googleapis.com/ajax/libs/dojo/1.10.3/dojo/dojo.js" type="text/javascript" data-dojo-config="parseOnLoad:true,isDebug:false,locale:'es'"></script>
+        <script type="text/javascript">
+            <!--
+            require(['dojo/parser',
+                    'dijit/TitlePane'
+                    ]
+            );
+            //-->
+        </script>
+    </head>
+    <body class="claro">
+        <div id="aContenedor">
+            <div id="aContenido">
+                <header>
+
+                    <div class="aHeadContenedor">
+                        <div class="aHeadAgrupador">
+                            <div class="aHeadPrincipal">
+    <div class="aHeadTexto"><a class="aLogo" href="/"><img alt="ANUIES" src="/recursos/imagenes/anuies_75.png" title="Logo de la ANUIES"></a>
+        <div class="aHeadTitulo">
+            <p class="a1erEncabezado"><a href="/">Asociación Nacional de Universidades<br>e Instituciones de Educación Superior</a></p>
+            <p class="aSlogan">Al servicio y fortalecimiento de la educación superior.</p>
+        </div><!-- class="aHeadTitulo -->
+    </div><!-- class_aHeadTexto -->
+    <nav class="aHeadSocial">
+        <ul class="aNoDrop">
+            <li><a href="https://anuies.mx/webmail/" target="_blank"><span class="aSprite aWebMail" title="WebMail de la ANUIES"></span></a></li>
+            <li><a href="https://twitter.com/ANUIES/" target="_blank"><span class="aSprite aTwitter" title="La ANUIES en Twitter"></span></a></li>
+            <li><a href="https://www.facebook.com/anuies" target="_blank"><span class="aSprite aFacebook" title="La ANUIES en Facebook"></span></a></li>
+            <li><a href="https://www.youtube.com/channel/UC8OuiRFx8oh2UF_4tOcC2BQ" target="_blank"><span class="aSprite aYouTube" title="El canal de la ANUIES en YouTube"></span></a></li>
+        </ul>
+    </nav>
+</div><!-- class_aHeadPrincipal -->                        </div><!-- class_aHeadAgrupador -->
+
+                        <div class="aNavContenedor">
+                            <nav class="aMenuPrincipal">
+    <ul id="aMenu">
+                    <li><a style="width:58px;" class="" href="#" target="_self"><abbr title="Asociación Nacional de Universidades e Instituciones de Educación Superior">ANUIES</abbr></a>
+                                <ul class="aSub1">
+                                                <li><a class="aFly" href="/anuies/acerca-de-la-anuies" target='_self'>Acerca de la ANUIES</a></li>
+                                                        <li><a class="aFly" href="/anuies/estructura-organica" target='_self'>Estructura Orgánica</a></li>
+                                                        <li><a class="aFly" href="/anuies/instituciones-de-educacion-superior" target='_self'>Instituciones de Educación Superior</a></li>
+                                                        <li><a class="aFly" href="https://lasredes.anuies.mx/" target='_blank'>Redes de Colaboración</a></li>
+                                                </ul>
+                                    </li>
+                            <li><a style="width:170px;" class="" href="#" target="_self">Programas y Proyectos</a>
+                                <ul class="aSub1">
+                                                <li><a class="aFly" href="/programas-y-proyectos/cooperacion-academica-nacional-e-internacional" target='_self'>Cooperación Académica Nacional e Internacional</a></li>
+                                                        <li><a class="aFly" href="/programas-y-proyectos/proyectos-academicos" target='_self'>Proyectos Académicos</a></li>
+                                                        <li><a class="aFly" href="http://publicaciones.anuies.mx/" target='_self'>Publicaciones</a></li>
+                                                </ul>
+                                    </li>
+                            <li><a style="width:170px;" class="" href="#" target="_self">Información y Servicios</a>
+                                <ul class="aSub1">
+                                                <li><a class="aFly" href="/informacion-y-servicios/informacion-estadistica-de-educacion-superior" target='_self'>Información Estadística de Educación Superior</a></li>
+                                                        <li><a class="aFly" href="/informacion-y-servicios/centro-de-informacion-sobre-la-educacion-superior-biblioteca" target='_self'>Centro de Información sobre la Educación Superior (Biblioteca)</a></li>
+                                                        <li><a class="aFly" href="/informacion-y-servicios/desarrollo-educativo" target='_self'>Desarrollo educativo</a></li>
+                                                        <li><a class="aFly" href="/informacion-y-servicios/centro-de-capacitacion-anuies-valle-de-bravo" target='_blank'>Centro de capacitación ANUIES Valle de Bravo</a></li>
+                                                </ul>
+                                    </li>
+                            <li><a style="width:px;" class="" href="https://web.anuies.mx/politica-integridad-anuies/" target="_blank">POLÍTICA DE INTEGRIDAD</a>
+                        </li>
+                            <li><a style="width:180px;" class="" href="http://cid.anuies.mx" target="_blank">Centro de Innovación</a>
+                        </li>
+                            <li><a style="width:110px;" class="" href="https://valledebravo.anuies.mx/" target="_blank">Centro Valle de Bravo</a>
+                        </li>
+                            <li><a style="width:50px;" class="" href="#" target="_self">LAB IG</a>
+                                <ul class="aSub1">
+                                                <li><a class="aFly" href="https://sites.google.com/view/lab-ig/inicio?authuser=0" target='_blank'>LAB IG</a></li>
+                                                        <li><a class="aFly" href="https://sites.google.com/view/anuiesinnovacion/cocina-c%C3%ADvica" target='_blank'>Cocina</a></li>
+                                                        <li><a class="aFly" href="https://sites.google.com/view/laboratoriojuventudes/inicio" target='_blank'>Lab Juventud(es)</a></li>
+                                                </ul>
+                                    </li>
+                    </ul>
+</nav>
+<div>
+<!--<form id="Buscar" name="Buscar" action="/busqueda-resultados.php" method="post">
+    <input id="anx_hs" name="anx_hs" type="hidden" value="e009d3c1dd36da9bdba553f78bf178fa">
+    <p class="aCampo"><label for="Buscador">Buscar:</label><input type="text" id="varBusqueda" name="varBusqueda" maxlength="255" required="required" placeholder="Ingrese un término"> <button class="aBoton aBotonBuscar">&raquo;</button></p>
+</form>-->
+</div>                        </div><!-- class_aNavContenedor -->
+                    </div><!-- class_aHeadContenedor -->
+
+                    <nav class="aMenuLinks">
+    <ul class="aNoDrop">
+
+        <li><a class="aMenuItemPrimero" href="/sitios-de-interes">Sitios de Interés</a></li>
+        <li><a href="/mapa-del-sitio/">Mapa del Sitio</a></li>
+        <li><a href="/media/docs/aviso_privacidad_anuies.pdf">Aviso de Privacidad</a></li>
+        <li><a href="/ubicacion">Ubicación</a></li>
+        <li><a href="https://anuies.mx/webmail/">Correo Institucional</a></li>
+        <li><a class="aMenuItemUltimo" href="/contacto">Contacto</a></li>
+    </ul>
+</nav>
+                </header>
+
+                <div class="aSubContenedor">
+
+                    <div class="aMigajas">
+                        <ul>
+                            <li><a href="/">Inicio</a>&nbsp;<span class="aIndicador">&gt;</span>&nbsp;</li>
+                            <li><a>ANUIES</a>&nbsp;</li>
+                            <li class="aMigajaActiva"><a>Instituciones de Educación Superior</a>&nbsp;</li>
+                        </ul>
+                    </div>
+
+                    <div class="aSubContenido3">
+
+                        <section class="aArticulo">
+
+                            <h1>Instituciones de Educación Superior</h1>
+                            <div id='institucionesDivDespliegueTitulo'>
+                                <div id='institucionesDivDespliegueImagen'>
+                                    <img class='institucionesImgLogoInstitucion' src='../../img/escudos/8.gif' alt='Instituto Tecnol�gico de Aguascalientes (ITA)' width='100' height='130'>
+                                </div>
+                                    Instituto Tecnológico de Aguascalientes (ITA)
+                            </div>
+                            <div id='institucionesDivDespliegueDatosGenerales'> Público de la Secretaría de Educación Pública, adscrito al Tecnológico Nacional de México, antes Instituto Tecnológico Regional de Aguascalientes.<br>Aguascalientes, Aguascalientes
+                            </div>
+                            <div id='institucionesDivAfiliaciones'>
+                                <span class='institucionesAfiliacionANUIES'>Afiliada a ANUIES</span>
+                                <span class='institucionesAfiliacionCONAC'>Consejo Nacional</span>
+                                <span class='institucionesAfiliacionConReg'>Centro-Occidente</span>
+                            </div>
+                            <div class='divTituloSubseccion'>
+                                <a id='colapsable1' class='aTituloSubseccion' href='#'>Datos Generales</a>
+                            </div>
+                            <script type='text/javascript'>$('#colapsable1').click(function(event) {event.preventDefault();$('#institucionesDivGeneralesTexto').toggle('slide',{direction: 'up'}, 'fast', function() {if ($('#institucionesDivGeneralesTexto').is(':visible')) {}else {$('#iconoColapsable1').attr('src','img/mostrar_subseccion_normal_0_1.png');}});});
+                            </script>
+                            <div id='institucionesDivGeneralesTexto' class='institucionesDivGeneralesTexto'>
+                                <ul>
+                                    <li>
+                                        <span class='institucionesSpanDato'>Fecha de creación: </span>
+                                        18/09/1967
+                                    </li>
+                                    <li>
+                                        <span class='institucionesSpanDato'>Niveles Académicos: 
+                                        </span>
+                                            <ul>
+                                                <li>Licenciatura</li>
+                                                <li>Posgrado</li>
+                                                <li>Maestría</li><li>Doctorado</li>
+                                            </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class='divTituloSubseccion'>
+                                <a id='colapsable2' class='aTituloSubseccion' href='#'>Dirección y Datos de Contacto</a>
+                            </div>
+                                <script type='text/javascript'>$('#colapsable2').click(function(event) {event.preventDefault();$('#institucionesDivDireccion').toggle('slide',{direction: 'up'}, 'fast', function() {if ($('#institucionesDivDireccion').is(':visible')) {}else {$('#iconoColapsable1').attr('src','img/mostrar_subseccion_normal_0_1.png');}});});</script>
+                            <div id='institucionesDivDireccion' class='institucionesDivDireccion'>
+                                <ul>
+                                    <li>
+                                        <span class='institucionesSpanDato'>Dirección: </span>
+                                        63
+                                    </li>
+                                    <li>
+                                        <span class='institucionesSpanDato'>
+                                            Teléfono: 
+                                        </span>
+                                        (449) 
+                                    </li>
+                                    <li>
+                                        <span class='institucionesSpanDato'>
+                                            Fax: 
+                                        </span>(449) </li><li><span class='institucionesSpanDato'>Página Web: </span><a href='https://aguascalientes.tecnm.mx/'>https://aguascalientes.tecnm.mx/</a></li><li><span class='institucionesSpanDato'>Email: </span>dir_aguascalientes@tecnm.mx, direccion@aguascalientes.tecnm.mx</li></ul></div>                        </section><!-- h1 -->
+
+                    </div><!-- class_aSubContenido3 -->
+
+                </div><!-- class_aSubContenedor -->
+
+            </div><!-- id_aContenido -->
+            <footer class="aFooterInterno">
+    <small>Derechos Reservados © 2023 ANUIES - Tenayuca 200, Col. Santa Cruz Atoyac, CP 03310, México, DF - Tel. <em>+52 (55) 5420 4900</em></small>
+</footer>        </div><!-- id_aContenedor -->
+    </body>
+</html>
